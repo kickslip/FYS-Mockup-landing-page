@@ -4,6 +4,12 @@
 
 const UNIT = 34.95;
 
+/* Countdown window. Rolling deadline OFFER_DAYS from now, ending at midnight.
+   0 = tonight, 3 = three days out. Set OFFER_END to an ISO date string
+   ('2026-08-31T23:59:59') to pin the countdown to a fixed campaign end instead. */
+const OFFER_DAYS = 3;
+const OFFER_END = null;
+
 const TIERS = {
   1: { paid: 1, free: 0, price: 34.95,  label: '1 Pair' },
   2: { paid: 2, free: 0, price: 64.95,  label: '2 Pairs' },
@@ -111,14 +117,28 @@ function render() {
 /* ---------------- Countdown ---------------- */
 (function countdown() {
   const el = $('countdown');
-  const end = new Date();
-  end.setHours(23, 59, 59, 999);
+
+  function deadline() {
+    if (OFFER_END) return new Date(OFFER_END);
+    const d = new Date();
+    d.setDate(d.getDate() + OFFER_DAYS);
+    d.setHours(23, 59, 59, 999);
+    return d;
+  }
+
+  let end = deadline();
   const tick = () => {
-    let s = Math.max(0, Math.floor((end - Date.now()) / 1000));
-    const h = String(Math.floor(s / 3600)).padStart(2, '0');
+    let s = Math.floor((end - Date.now()) / 1000);
+    if (s <= 0) {
+      // rolling offer: reset to the next window rather than sitting at zero
+      if (!OFFER_END) { end = deadline(); s = Math.floor((end - Date.now()) / 1000); }
+      else s = 0;
+    }
+    const d = Math.floor(s / 86400);
+    const h = String(Math.floor((s % 86400) / 3600)).padStart(2, '0');
     const m = String(Math.floor((s % 3600) / 60)).padStart(2, '0');
     const sec = String(s % 60).padStart(2, '0');
-    el.textContent = `${h}:${m}:${sec}`;
+    el.textContent = d > 0 ? `${d}d ${h}:${m}:${sec}` : `${h}:${m}:${sec}`;
   };
   tick();
   setInterval(tick, 1000);
