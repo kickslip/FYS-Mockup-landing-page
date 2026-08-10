@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy 3, Get 1 Free — Footsouls Bundle | Feel Your Soul</title>
+<meta name="description" content="Footsouls comfort insoles for Converse &amp; Vans. Buy 3 pairs, get the 4th free — one for every pair of shoes you own.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;1,700&family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ ANNOUNCEMENT / URGENCY BAR ============ -->
+<div class="announce" id="announce">
+  <div class="announce__inner">
+    <span class="announce__dot"></span>
+    <strong>BUY 3, GET 1 FREE</strong>
+    <span class="announce__sep">—</span>
+    <span>offer ends in</span>
+    <span class="countdown" id="countdown" aria-live="off">--:--:--</span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="wrap header__inner">
+    <nav class="header__nav" aria-label="Primary">
+      <a href="#bundle">Shop</a>
+      <a href="#how">How it works</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <a class="header__logo" href="#top" aria-label="Feel Your Soul home">
+      <img src="assets/logo.png" alt="Feel Your Soul">
+    </a>
+    <div class="header__actions">
+      <button class="iconbtn" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      </button>
+      <button class="iconbtn" aria-label="Account">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+      </button>
+      <button class="iconbtn iconbtn--cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 016 0"/></svg>
+        <span class="cartcount" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO / BUNDLE BUILDER ============ -->
+<section class="hero">
+  <div class="wrap hero__grid">
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <div class="gallery__main">
+        <span class="flag flag--yellow">BUY 3, GET 1 FREE</span>
+        <img id="galleryMain" src="assets/hero.jpg" alt="Footsouls insoles inside Vans and Converse sneakers">
+      </div>
+      <div class="gallery__thumbs" role="tablist" aria-label="Product images">
+        <button class="thumb is-active" role="tab" aria-selected="true" data-src="assets/hero.jpg"><img src="assets/hero.jpg" alt="Footsouls in Vans"></button>
+        <button class="thumb" role="tab" aria-selected="false" data-src="assets/p3.jpg"><img src="assets/p3.jpg" alt="Converse high top with Footsouls boxes"></button>
+        <button class="thumb" role="tab" aria-selected="false" data-src="assets/p2.jpg"><img src="assets/p2.jpg" alt="Converse and checkered slip-ons held up"></button>
+        <button class="thumb" role="tab" aria-selected="false" data-src="assets/p1.jpg"><img src="assets/p1.jpg" alt="Stack of Vans and Converse sneakers"></button>
+        <button class="thumb" role="tab" aria-selected="false" data-src="assets/band2.jpg"><img src="assets/band2.jpg" alt="Turn your Converse and Vans into your comfiest pair of shoes"></button>
+      </div>
+    </div>
+
+    <!-- Buy box -->
+    <div class="buybox">
+      <div class="rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="rating__text"><strong>4.8</strong> · 3,412 reviews</span>
+      </div>
+
+      <h1 class="h1">
+        FOOTSOULS<span class="reg">®</span><br>
+        <span class="h1__accent">BUY 3, GET 1 FREE</span>
+      </h1>
+
+      <p class="sub">The insole that turns your Converse &amp; Vans into all-day shoes. Most people own more than one pair of sneakers — so we made the 4th set free.</p>
+
+      <!-- THE MECHANIC, STATED IN ONE LINE -->
+      <div class="mechanic">
+        <div class="mechanic__row">
+          <span class="chip">1</span><span class="chip">2</span><span class="chip">3</span>
+          <span class="mechanic__plus">+</span>
+          <span class="chip chip--free">FREE</span>
+        </div>
+        <p class="mechanic__text">Add <strong>3 pairs</strong> to your cart. The <strong>4th is automatically free</strong> — no code needed.</p>
+      </div>
+
+      <!-- TIER SELECTOR -->
+      <div class="tiers" id="tiers" role="radiogroup" aria-label="Choose your bundle">
+
+        <label class="tier" data-tier="1">
+          <input type="radio" name="tier" value="1">
+          <span class="tier__radio" aria-hidden="true"></span>
+          <span class="tier__body">
+            <span class="tier__title">1 Pair</span>
+            <span class="tier__meta">Try it out</span>
+          </span>
+          <span class="tier__price">
+            <span class="tier__now">$34.95</span>
+            <span class="tier__each">$34.95 / pair</span>
+          </span>
+        </label>
+
+        <label class="tier" data-tier="2">
+          <input type="radio" name="tier" value="2">
+          <span class="tier__radio" aria-hidden="true"></span>
+          <span class="tier__body">
+            <span class="tier__title">2 Pairs</span>
+            <span class="tier__meta">Save $4.95</span>
+          </span>
+          <span class="tier__price">
+            <span class="tier__was">$69.90</span>
+            <span class="tier__now">$64.95</span>
+            <span class="tier__each">$32.48 / pair</span>
+          </span>
+        </label>
+
+        <label class="tier tier--hero is-selected" data-tier="4">
+          <input type="radio" name="tier" value="4" checked>
+          <span class="tier__radio" aria-hidden="true"></span>
+          <span class="tier__body">
+            <span class="tier__title">3 Pairs <span class="tier__free">+ 1 FREE</span></span>
+            <span class="tier__meta">4 pairs · save $34.95</span>
+          </span>
+          <span class="tier__price">
+            <span class="tier__was">$139.80</span>
+            <span class="tier__now">$104.85</span>
+            <span class="tier__each">$26.21 / pair</span>
+          </span>
+          <span class="tier__flag">MOST POPULAR · 68% CHOOSE THIS</span>
+        </label>
+
+        <label class="tier" data-tier="8">
+          <input type="radio" name="tier" value="8">
+          <span class="tier__radio" aria-hidden="true"></span>
+          <span class="tier__body">
+            <span class="tier__title">6 Pairs <span class="tier__free">+ 2 FREE</span></span>
+            <span class="tier__meta">Squad / family pack</span>
+          </span>
+          <span class="tier__price">
+            <span class="tier__was">$279.60</span>
+            <span class="tier__now">$199.00</span>
+            <span class="tier__each">$24.88 / pair</span>
+          </span>
+        </label>
+      </div>
+
+      <!-- PROGRESS TO FREE PAIR -->
+      <div class="progress" id="progress">
+        <div class="progress__bar"><span id="progressFill"></span></div>
+        <p class="progress__label" id="progressLabel"></p>
+      </div>
+
+      <!-- SIZE SLOTS -->
+      <div class="slots" id="slots" aria-live="polite"></div>
+
+      <!-- SUMMARY + ATC -->
+      <div class="summary">
+        <div class="summary__line">
+          <span>Subtotal</span>
+          <span id="sumWas" class="strike">$139.80</span>
+        </div>
+        <div class="summary__line summary__line--save">
+          <span>Bundle discount</span>
+          <span id="sumSave">−$34.95</span>
+        </div>
+        <div class="summary__line summary__line--total">
+          <span>Total</span>
+          <span id="sumTotal">$104.85</span>
+        </div>
+      </div>
+
+      <button class="btn btn--primary btn--xl" id="atc">
+        <span id="atcLabel">ADD 4 PAIRS — $104.85</span>
+      </button>
+      <p class="micro" id="microCopy">Free US shipping unlocked · 30-day comfort guarantee · Ships in 24h</p>
+
+      <ul class="trustrow">
+        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Free US shipping over $40</li>
+        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>30-day comfort guarantee</li>
+        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3-5 7-5s7 1.7 7 5"/><path d="M17 11a3 3 0 100-6"/><path d="M18 20c0-2.2-.8-3.7-2-4.6"/></svg>60,000+ happy feet</li>
+      </ul>
+
+      <p class="stockline"><span class="pulse"></span><strong id="stockLeft">41</strong> bundles left at this price today</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>WALK ON CLOUDS</span><span class="dot">●</span><span>CONVERSE &amp; VANS</span><span class="dot">●</span><span>BUY 3 GET 1 FREE</span><span class="dot">●</span><span>60,000+ CUSTOMERS</span><span class="dot">●</span>
+    <span>WALK ON CLOUDS</span><span class="dot">●</span><span>CONVERSE &amp; VANS</span><span class="dot">●</span><span>BUY 3 GET 1 FREE</span><span class="dot">●</span><span>60,000+ CUSTOMERS</span><span class="dot">●</span>
+  </div>
+</div>
+
+<!-- ============ WHY A 4TH PAIR (THE AOV ARGUMENT) ============ -->
+<section class="why" id="why">
+  <div class="wrap">
+    <h2 class="h2">ONE PAIR OF FOOTSOULS<br><span class="hl">PER PAIR OF SHOES.</span></h2>
+    <p class="lede">Footsouls are trimmed to fit and live in one shoe — they're not made to be swapped around every morning. The average Feel Your Soul customer owns <strong>3.4 pairs</strong> of Converse or Vans. That's why the 4th set is free.</p>
+
+    <div class="why__grid">
+      <article class="why__card">
+        <img src="assets/p3.jpg" alt="Converse Chuck Taylor high top">
+        <h3>Your Chucks</h3>
+        <p>The pair you wear everywhere and take off the second you get home.</p>
+      </article>
+      <article class="why__card">
+        <img src="assets/p1.jpg" alt="Stack of Vans and Converse sneakers">
+        <h3>Your Old Skools</h3>
+        <p>The everyday beaters that do 8,000 steps a day without complaining.</p>
+      </article>
+      <article class="why__card">
+        <img src="assets/p2.jpg" alt="Checkered slip-ons and Converse">
+        <h3>Your slip-ons</h3>
+        <p>Zero support out of the box. The biggest comfort upgrade of the four.</p>
+      </article>
+      <article class="why__card why__card--free">
+        <img src="assets/ugc7.jpg" alt="Customer wearing sneakers outdoors">
+        <span class="freetag">FREE</span>
+        <h3>The 4th pair</h3>
+        <p>Gift it, keep it as a spare, or fit the shoes you forgot you owned.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how" id="how">
+  <div class="wrap">
+    <h2 class="h2 center">HOW THE BUNDLE WORKS</h2>
+    <ol class="steps">
+      <li>
+        <span class="steps__num">1</span>
+        <h3>Pick 4 sizes</h3>
+        <p>Mix and match — different sizes in one bundle is fine. Choose for you, your partner, your roommate.</p>
+      </li>
+      <li>
+        <span class="steps__num">2</span>
+        <h3>Discount applies itself</h3>
+        <p>The cheapest pair drops to $0 in cart. No coupon code, nothing to remember.</p>
+      </li>
+      <li>
+        <span class="steps__num">3</span>
+        <h3>Trim &amp; drop in</h3>
+        <p>Cut along the size line, drop them into each shoe, walk on clouds. 60 seconds per pair.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ COMPARISON ============ -->
+<section class="compare">
+  <div class="wrap compare__grid">
+    <div class="compare__copy">
+      <h2 class="h2">THE MATH IS<br><span class="hl">EMBARRASSINGLY SIMPLE.</span></h2>
+      <p class="lede">Buying one pair at a time costs you $34.95 every time. Buying the bundle once costs you $26.21 a pair — and you never have to think about it again.</p>
+      <a class="btn btn--dark" href="#bundle" data-scroll>BUILD MY BUNDLE</a>
+    </div>
+    <table class="ctable">
+      <thead><tr><th></th><th>1 pair</th><th class="hi">3 + 1 free</th></tr></thead>
+      <tbody>
+        <tr><td>Price per pair</td><td>$34.95</td><td class="hi">$26.21</td></tr>
+        <tr><td>You pay</td><td>$34.95</td><td class="hi">$104.85</td></tr>
+        <tr><td>You save</td><td>—</td><td class="hi">$34.95</td></tr>
+        <tr><td>Free shipping</td><td>No</td><td class="hi">Yes</td></tr>
+        <tr><td>Shoes covered</td><td>1</td><td class="hi">4</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="reviews__head">
+      <h2 class="h2">4.8 / 5 FROM 3,412 REVIEWS</h2>
+      <span class="stars stars--lg" aria-hidden="true">★★★★★</span>
+    </div>
+    <div class="reviews__grid">
+      <blockquote class="review">
+        <span class="stars">★★★★★</span>
+        <p>“Bought the 3+1. Put them in my Chucks, my Old Skools and two pairs of slip-ons. I have not taken my shoes off early once since.”</p>
+        <footer>Maya R. <span class="verified">Verified buyer</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <span class="stars">★★★★★</span>
+        <p>“I was going to buy one. Then I realised I'd just be back in a month for my other shoes. The bundle was a no-brainer.”</p>
+        <footer>Devon K. <span class="verified">Verified buyer</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <span class="stars">★★★★★</span>
+        <p>“Worked a 10-hour shift on concrete in Vans. Zero foot pain. Gave the free pair to my sister and she ordered her own bundle.”</p>
+        <footer>Alicia T. <span class="verified">Verified buyer</span></footer>
+      </blockquote>
+    </div>
+
+    <h3 class="ugc__title">#FEELYOURSOULCLUB</h3>
+    <div class="ugc">
+      <img src="assets/ugc2.jpg" alt="Community photo"><img src="assets/ugc3.jpg" alt="Community photo"><img src="assets/ugc4.jpg" alt="Community photo"><img src="assets/ugc5.jpg" alt="Community photo"><img src="assets/ugc6.jpg" alt="Community photo"><img src="assets/ugc1.jpg" alt="Community photo">
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUARANTEE ============ -->
+<section class="guarantee">
+  <div class="wrap guarantee__inner">
+    <div class="guarantee__badge">30<span>DAY</span></div>
+    <div>
+      <h2 class="h3">Wear them for 30 days. Trim them, scuff them, live in them.</h2>
+      <p>If your Converse and Vans aren't the comfiest shoes you own, email <a href="mailto:help@feelyoursoul.com">help@feelyoursoul.com</a> and we'll refund you — bundle included. You keep the free pair.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="wrap wrap--narrow">
+    <h2 class="h2 center">QUESTIONS</h2>
+    <div class="acc">
+      <details open>
+        <summary>Do I need a discount code for the free pair?</summary>
+        <p>No. Add 3 pairs and the 4th is added at $0 automatically at checkout.</p>
+      </details>
+      <details>
+        <summary>Can I choose different sizes in one bundle?</summary>
+        <p>Yes — every slot has its own size selector. Mix men's and women's sizes freely.</p>
+      </details>
+      <details>
+        <summary>Can't I just move one pair between shoes?</summary>
+        <p>You can, but Footsouls are trimmed to the shoe they live in and bed into the footbed over the first week. Most people keep one set per pair of shoes.</p>
+      </details>
+      <details>
+        <summary>Will they fit shoes other than Converse and Vans?</summary>
+        <p>They're engineered around the flat footbed of Chucks, Authentics, Old Skools and slip-ons, and fit most flat-soled sneakers.</p>
+      </details>
+      <details>
+        <summary>What if I order the wrong size?</summary>
+        <p>Free exchanges within 30 days, US and international. Keep the pair you already trimmed.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <img class="footer__logo" src="assets/logo.png" alt="Feel Your Soul">
+      <p>Footsouls® — comfort insoles for Converse &amp; Vans. Founded by Jacob Zander, 2019.</p>
+    </div>
+    <div>
+      <h4>NAVIGATE</h4>
+      <a href="#bundle">Shop Converse Footsouls</a>
+      <a href="#bundle">Shop Vans Footsouls</a>
+      <a href="#why">About</a>
+    </div>
+    <div>
+      <h4>OFFICIAL</h4>
+      <a href="#">Returns &amp; Exchanges</a>
+      <a href="#">Shipping Information</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div>
+      <h4>SUPPORT</h4>
+      <a href="mailto:help@feelyoursoul.com">help@feelyoursoul.com</a>
+      <p class="footer__note">Concept mockup for assessment purposes — not the live Feel Your Soul store.</p>
+    </div>
+  </div>
+</footer>
+</main>
+
+<!-- ============ STICKY MOBILE / SCROLL BAR ============ -->
+<div class="stickybar" id="stickybar">
+  <div class="stickybar__info">
+    <span class="stickybar__title" id="stickyTitle">3 Pairs + 1 FREE</span>
+    <span class="stickybar__price"><strong id="stickyTotal">$104.85</strong> <s id="stickyWas">$139.80</s></span>
+  </div>
+  <button class="btn btn--primary" id="stickyAtc">ADD TO CART</button>
+</div>
+
+<!-- ============ TOAST / CART CONFIRM ============ -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast__check">✓</span>
+  <div>
+    <strong id="toastTitle">Added to cart</strong>
+    <span id="toastSub">Your free pair was applied automatically.</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
