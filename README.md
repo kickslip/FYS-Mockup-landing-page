@@ -1,6 +1,6 @@
 # Feel Your Soul — "Buy 3, Get 1 Free" Footsouls bundle page
 
-Concept mockup for the Feel Your Soul Shopify. Static HTML/CSS/JS,
+Concept mockup for the Feel Your Soul Shopify Developer Assessment. Static HTML/CSS/JS,
 no build step, hosted on GitHub Pages.
 
 **Live:** https://kickslip.github.io/fys-bundle-page/
